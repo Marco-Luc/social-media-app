@@ -1,0 +1,9 @@
+@import "../../partials/mixin";
+.comments {
+  @include themify($themes) {
+    img {
+    }
+  }
+  .comment {
+  }
+}

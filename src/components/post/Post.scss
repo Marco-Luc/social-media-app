@@ -1,4 +1,4 @@
-@import "../../app.scss";
+@import "../../partials/mixin";
 
 .post {
   @include themify($themes) {

@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import "../../partials/mixin";
 
 .navbar {
   @include themify($themes) {
