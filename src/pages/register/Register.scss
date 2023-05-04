@@ -1,0 +1,80 @@
+@use "../../partials/mixin" as *;
+@use "../../partials/variables" as *;
+
+.register {
+  height: 100vh;
+  background-color: $mainColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .card {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    border-radius: 0.625rem;
+    min-height: 37.5rem;
+    overflow: hidden;
+
+    .left {
+      flex: 1;
+      background: linear-gradient(rgb(255, 175, 69, 0.5), rgba(116, 66, 2, 0.5)),
+        url("../../assets/Images/leo2.jpg");
+      background-size: cover;
+      padding: 3.125rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.875rem;
+      color: white;
+      h1 {
+        font-size: 6.25rem;
+        line-height: 6.25rem;
+      }
+      p {
+      }
+      span {
+        font-size: 0.875rem;
+      }
+      button {
+        width: 50%;
+        padding: 0.625rem;
+        border: none;
+        background-color: white;
+        color: $mainColor;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+    .right {
+      flex: 1;
+      padding: 3.125rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3.125rem;
+      justify-content: center;
+      h1 {
+        color: #555;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.875rem;
+
+        input {
+          border: none;
+          border-bottom: 0.063rem solid lightgray;
+          padding: 1.25rem 0.625rem;
+        }
+        button {
+          width: 50%;
+          padding: 0.625rem;
+          border: none;
+          background-color: $mainColor;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

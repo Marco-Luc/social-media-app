@@ -1,0 +1,62 @@
+@import "../../App.scss";
+
+.navbar {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 1.25rem;
+    height: 3.125rem;
+    border-bottom: 0.063rem solid themed("border");
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color: themed("textColor");
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 1.875rem;
+
+      span {
+        font-weight: bold;
+        font-size: 1.25rem;
+        color: themed("logo");
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        border: 0.063rem solid themed("border");
+        border-radius: 0.313rem;
+        padding: 0.313rem;
+
+        input {
+          border: none;
+          width: 31.25rem;
+          background-color: transparent;
+          color: themed("textColor");
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        font-weight: 500;
+        img {
+          width: 1.875rem;
+          height: 1.875rem;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        span {
+        }
+      }
+    }
+  }
+}
