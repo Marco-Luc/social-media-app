@@ -41,7 +41,10 @@ const Navbar = () => {
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className="user">
-          <img src={currentUser.profilePic} alt="User Profile" />
+          <img
+            src="https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg"
+            alt="User Profile"
+          />
           <span>{currentUser.name}</span>
         </div>
       </div>

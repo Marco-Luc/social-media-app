@@ -23,7 +23,10 @@ const Leftbar = () => {
       <div className="container">
         <div className="menu">
           <div className="user">
-            <img src={currentUser.profilePic} alt="Leo Profile" />
+            <img
+              src="https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg"
+              alt="Leo Profile"
+            />
             <span>{currentUser.name}</span>
           </div>
 

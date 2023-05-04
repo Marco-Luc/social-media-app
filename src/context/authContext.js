@@ -10,11 +10,13 @@ export const AuthModeContextProvider = ({ children }) => {
   );
 
   //API is going to return user info
+
   const login = () => {
     setCurrentUser({
       id: 1,
-      name: "Leo Dude",
-      profilePic: "https://images.app.goo.gl/vkTu2DqrCVH7bdFj7",
+      name: "Bruce",
+      profilePic:
+        "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
     });
   };
 
