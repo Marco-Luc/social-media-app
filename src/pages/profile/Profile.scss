@@ -1,0 +1,97 @@
+@import "../../partials/mixin";
+
+.profile {
+  @include themify($themes) {
+    background-color: themed("bgSoft");
+
+    .images {
+      width: 100%;
+      height: 18.75rem;
+      position: relative;
+      .cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .profilePic {
+        width: 12.5rem;
+        height: 12.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 12.5rem;
+        margin: auto;
+      }
+    }
+    .profileContainer {
+      padding: 1.25rem 4.375rem;
+      .uInfo {
+        height: 11.25rem;
+        -webkit-box-shadow: 0rem 0rem 1.563rem -0.625rem rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: 0rem 0rem 1.563rem -0.625rem rgba(0, 0, 0, 0.38);
+        box-shadow: 0rem 0rem 1.563rem -0.625rem rgba(0, 0, 0, 0.38);
+        border-radius: 1.25rem;
+        background-color: themed("bg");
+        color: themed("textColor");
+        padding: 10rem 3.125rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
+        .left {
+          flex: 1;
+          display: flex;
+          gap: 0.625rem;
+          a {
+            color: themed("textColorSoft");
+          }
+        }
+        .center {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.625rem;
+
+          span {
+            font-weight: 500;
+            font-size: 1.875rem;
+          }
+          .info {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .item {
+              align-items: center;
+              display: flex;
+              gap: 0.313rem;
+              color: themed("textColorSoft");
+
+              span {
+                font-size: 0.75rem;
+              }
+            }
+          }
+          button {
+            border: none;
+            background-color: lightskyblue;
+            color: white;
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.313rem;
+            cursor: pointer;
+          }
+        }
+        .right {
+          flex: 1;
+          display: flex;
+          gap: 0.625rem;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
