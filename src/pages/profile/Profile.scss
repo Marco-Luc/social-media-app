@@ -27,6 +27,12 @@
     }
     .profileContainer {
       padding: 1.25rem 4.375rem;
+      @include mobile {
+        padding: 0.625rem;
+      }
+      @include tablet {
+        padding: 1.25rem;
+      }
       .uInfo {
         height: 11.25rem;
         -webkit-box-shadow: 0rem 0rem 1.563rem -0.625rem rgba(0, 0, 0, 0.38);
@@ -35,15 +41,24 @@
         border-radius: 1.25rem;
         background-color: themed("bg");
         color: themed("textColor");
-        padding: 10rem 3.125rem;
+        padding: 10.5rem 3.125rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 1.25rem;
+        @include mobile {
+          flex-direction: column;
+          height: 50vh;
+          padding: 1.25rem;
+          margin-top: 6.25rem;
+        }
         .left {
           flex: 1;
           display: flex;
           gap: 0.625rem;
+          @include tablet {
+            flex-wrap: wrap;
+          }
           a {
             color: themed("textColorSoft");
           }

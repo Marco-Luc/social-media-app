@@ -1,14 +1,30 @@
+@import "../../partials/mixin";
+
 .stories {
   display: flex;
   gap: 0.625rem;
   height: 15.625rem;
   margin-bottom: 1.875rem;
+  @include mobile {
+    height: 3.125rem;
+    justify-content: space-between;
+  }
+  @include tablet {
+    height: 9.375rem;
+    gap: 1.25rem;
+  }
 
   .story {
     flex: 1;
     border-radius: 0.625rem;
     overflow: hidden;
     position: relative;
+    @include mobile {
+      width: 3.125rem;
+      height: 3.125rem;
+      flex: none;
+      border-radius: 50%;
+    }
 
     img {
       width: 100%;
@@ -21,6 +37,9 @@
       left: 0.625rem;
       color: white;
       font-weight: 500;
+      @include mobile {
+        display: none;
+      }
     }
     button {
       position: absolute;
@@ -37,6 +56,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @include mobile {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
     }
   }
 }

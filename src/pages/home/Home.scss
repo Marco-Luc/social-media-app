@@ -5,4 +5,10 @@
     background-color: themed("bgSoft");
     padding: 1.25rem 4.375rem;
   }
+  @include mobile {
+    padding: 0.625rem;
+  }
+  @include tablet {
+    padding: 1.25rem;
+  }
 }
