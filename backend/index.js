@@ -1,10 +1,14 @@
-import Express from "express";
-const app = Express();
+import express from "express";
+const app = express();
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import commentRoutes from "./routes/comments.js";
 import likeRoutes from "./routes/likes.js";
+
+// Middlewares
+// Without this, we will not be able to send any JSON objects
+app.use(express.json());
 
 // Our User route
 
