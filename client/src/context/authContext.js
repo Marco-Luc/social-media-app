@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import Leo from "../assets/Images/leo.jpg";
+import axios from "axios";
 
 export const AuthContext = createContext();
 
@@ -11,13 +11,15 @@ export const AuthModeContextProvider = ({ children }) => {
 
   //API is going to return user info
 
-  const login = () => {
-    setCurrentUser({
-      id: 1,
-      name: "Bruce",
-      profilePic:
-        "https://ggsc.s3.amazonaws.com/images/uploads/The_Science-Backed_Benefits_of_Being_a_Dog_Owner.jpg",
-    });
+  const login = async (inputs) => {
+    const res = await axios.post(
+      "http://localhost:8800/backend/auth/login",
+      inputs,
+      {
+        withCredentials: true,
+      }
+    );
+    setCurrentUser(res.data);
   };
 
   // user information gets stored in local storage. Then we can use current user

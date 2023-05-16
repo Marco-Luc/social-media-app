@@ -16,24 +16,29 @@ import { Navigate } from "react-router-dom";
 import { DarkModeContext } from "./context/darkModeContext";
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
 
   const { darkMode } = useContext(DarkModeContext);
 
+  const queryClient = new QueryClient();
+
   const Layout = () => {
     return (
-      <div className={`theme-${darkMode ? "dark" : "light"}`}>
-        <Navbar />
-        <div className="main-page">
-          <Leftbar />
-          <div className="outlet-container">
-            <Outlet />
+      <QueryClientProvider client={queryClient}>
+        <div className={`theme-${darkMode ? "dark" : "light"}`}>
+          <Navbar />
+          <div className="main-page">
+            <Leftbar />
+            <div className="outlet-container">
+              <Outlet />
+            </div>
+            <Rightbar />
           </div>
-          <Rightbar />
         </div>
-      </div>
+      </QueryClientProvider>
     );
   };
 
