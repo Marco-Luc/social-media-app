@@ -11,10 +11,19 @@ import cookieParser from "cookie-parser";
 // Middlewares
 // Without this, we will not be able to send any JSON objects
 // We used npm add cors because it provides more security. Nobody can reach our API, only allow them to reach localhost:3000 URL
-// We usewd npm add cookie-parser - it is a middleware which parses cookies attached to the client request object
+// We used npm add cookie-parser - it is a middleware which parses cookies attached to the client request object
+// Any time we make a request, we are gonna give access
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Credentials", true);
+  next();
+});
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 app.use(cookieParser());
 
 // Our User route
